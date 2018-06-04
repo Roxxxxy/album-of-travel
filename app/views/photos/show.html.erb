@@ -1,6 +1,16 @@
-<%= @photo.title %>
-<%= @photo.date %>
-<%= image_tag @photo.file_location.url, size: "140x140", class: "img-thumbnail" %>
-<%= simple_format(@photo.description) %>
+<div class="container">
+  <div class="page-header">
+    <h1>Album of Travel   <small> 記錄我的美好旅程 </small></h1>
+  </div>
 
-<p><%= link_to'Back to index', photos_path %></p>
+  <div class="show-info">
+    <%= image_tag @photo.file_location.url,  class: "img-thumbnail" %>
+      <h3><%= @photo.title %></h3>
+      <p>日期： <%= @photo.date %></p>
+      <p>內容： <%= simple_format(@photo.description) %></p>
+
+      <div class="links">
+        <%= link_to '回到首頁', photos_path, class: "btn btn-default active " %>
+      </div>
+    </div>
+</div>
