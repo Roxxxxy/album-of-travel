@@ -7,7 +7,7 @@
     <%= image_tag @photo.file_location.url,  class: "img-thumbnail" %>
       <h3><%= @photo.title %></h3>
       <p>日期： <%= @photo.date %></p>
-      <p>內容： <%= simple_format(@photo.description) %></p>
+      <p>內容： <%= @photo.description %></p>
 
       <div class="links">
         <%= link_to '回到首頁', photos_path, class: "btn btn-default active " %>
